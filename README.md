@@ -1,46 +1,38 @@
-# Getting Started with Create React App
+## PDF 파일에서 텍스트 추출하는 프로젝트
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+PDF파일에서 텍스트를 추출하는 프로젝트입니다.
+신 구조문을 배열 형태로 파싱하기 위해서 PDF의 텍스트를 x좌표 기준으로 나누었습니다.
+다른 의안 파일로도 x좌표 기준 파싱이 작동되는 것을 확인했습니다.
 
-## Available Scripts
 
-In the project directory, you can run:
+**yarn** 패키지를 사용하여 **Create React App**으로 프로젝트를 만들었습니다.
 
-### `yarn start`
+프로젝트를 내려받고 이하의 명령어로 의존성을 설치하시면 됩니다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+yarn install
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+그리고 다음의 명령어로 프로젝트를 실행하시면 됩니다.
 
-### `yarn test`
+```
+yarn start
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+화면에 보이는 파일 선택란에 PDF 의안파일을 업로드하면 PDF 뷰어가 생깁니다. 
 
-### `yarn build`
+![image](https://github.com/user-attachments/assets/3c6e75e6-a5b9-42a4-bba4-0ad5452996a7)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![image](https://github.com/user-attachments/assets/06839f3f-dbae-44ba-95a0-ae4eae79a3a6)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+PDF 페이지 이동도 가능합니다. 
 
-### `yarn eject`
+![image](https://github.com/user-attachments/assets/82895817-1c4b-40fe-83de-595b25d9c7f6)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+F12를 눌러 개발자도구의 콘솔을 확인하면 배열 형태로 파싱된 결과가 나옵니다.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+다음과 같이 파싱 결과를 확인할 수 있습니다.
+신 구조문이 아닌 PDF 텍스트들은 따로 처리하지 않았습니다.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+![image](https://github.com/user-attachments/assets/a55aea05-659d-4306-9c76-c6a289867049)
